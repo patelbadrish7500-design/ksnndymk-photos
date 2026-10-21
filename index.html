@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KSNNDYMK PHOTOS</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#10101c;color:white}
+header{text-align:center;padding:32px 15px;background:linear-gradient(135deg,#6d28d9,#db2777,#f59e0b)}
+header h1{margin:0;font-size:28px}
+header p{margin:10px 0 0}
+main{max-width:900px;margin:auto;padding:18px}
+.search{width:100%;padding:14px;border:0;border-radius:10px;font-size:16px;margin-bottom:18px}
+.notice{background:#242438;padding:15px;border-radius:12px;line-height:1.6}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
+.photo{background:#242438;border-radius:10px;overflow:hidden;text-align:center}
+.photo img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.photo p{font-size:13px;padding:0 5px}
+.empty{padding:28px 10px;text-align:center;color:#ddd}
+footer{text-align:center;color:#bbb;padding:24px;font-size:13px}
+@media(min-width:600px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header>
+<h1>📸 KSNNDYMK PHOTOS</h1>
+<p>Garba • Events • Memories</p>
+</header>
+<main>
+<input id="search" class="search" placeholder="🔍 ફોટા શોધો..." oninput="filterPhotos()">
+<div class="notice">
+<strong>તમારા યાદગાર પળો, એક જ જગ્યાએ!</strong><br>
+KSNNDYMK PHOTOS ની ઇવેન્ટ ફોટો ગેલેરીમાં આપનું સ્વાગત છે. ગરબા અને અન્ય ઇવેન્ટના ફોટા અહીં જોઈ શકશો.
+</div>
+<div id="gallery" class="gallery">
+<div class="empty" style="grid-column:1/-1">📷 ફોટા ટૂંક સમયમાં અહીં ઉમેરવામાં આવશે.</div>
+</div>
+</main>
+<footer>© KSNNDYMK PHOTOS</footer>
+<script>
+function filterPhotos(){
+ const q=document.getElementById('search').value.toLowerCase();
+ document.querySelectorAll('.photo').forEach(p=>{
+  p.style.display=p.innerText.toLowerCase().includes(q)?'':'none';
+ });
+}
+</script>
+</body>
+</html>
