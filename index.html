@@ -34,18 +34,16 @@ footer{text-align:center;color:#bbb;padding:24px;font-size:13px}
 <strong>તમારા યાદગાર પળો, એક જ જગ્યાએ!</strong><br>
 KSNNDYMK PHOTOS ની ઇવેન્ટ ફોટો ગેલેરીમાં આપનું સ્વાગત છે. ગરબા અને અન્ય ઇવેન્ટના ફોટા અહીં જોઈ શકશો.
 </div>
+
 <div id="gallery" class="gallery">
-<div class="empty" style="grid-column:1/-1">📷 ફોટા ટૂંક સમયમાં અહીં ઉમેરવામાં આવશે.</div>
+  <div class="photo">
+    <img src="./20261018_225655.jpg"
+         alt="Garba Event Photo"
+         loading="lazy">
+    <p>Garba Event Photo</p>
+    <a href="./20261018_225655.jpg" download
+       style="color:#f9a8d4;display:block;padding:10px">
+       ફોટો ડાઉનલોડ કરો
+    </a>
+  </div>
 </div>
-</main>
-<footer>© KSNNDYMK PHOTOS</footer>
-<script>
-function filterPhotos(){
- const q=document.getElementById('search').value.toLowerCase();
- document.querySelectorAll('.photo').forEach(p=>{
-  p.style.display=p.innerText.toLowerCase().includes(q)?'':'none';
- });
-}
-</script>
-</body>
-</html>
